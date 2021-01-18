@@ -31,8 +31,8 @@ def get_albums(Artiste):
 
 #%% Pistes selon l'album
 def get_lyrics(Album):
-    print()
     print(Album[0])
+    print()
     requete = requests.get(Album[3])    # On prend l'URL
     page = requete.content
     soup = BeautifulSoup(page, features="lxml")
@@ -238,6 +238,9 @@ for i in Albums[0]:
 Map, Nb_je = mapper(Lyrics_album)
 Reduce = reducer(Map)
 
+print()
+print('#---------------------------#')
+print()
 Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
 print(Reduce_ordered)
 
