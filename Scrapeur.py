@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Damso' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Loud' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -168,7 +168,7 @@ def mapper(Paroles) : # Entrée tableau des lignes
     for line in Paroles :
         line = line.strip()     # On retire les espaces avant et après
         line = line.translate(str.maketrans('', '', Ponct)) # On retire la ponctuation
-        line = line.replace('-', ' ') # On remplace les tirets par des espaces
+        #line = line.replace('-', ' ') # On remplace les tirets par des espaces
         words = line.split()    # On sépare les mots
 
         
