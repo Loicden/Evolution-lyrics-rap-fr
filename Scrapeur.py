@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Nepal' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Vald' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -31,6 +31,7 @@ def get_albums(Artiste):
 
 #%% Pistes selon l'album
 def get_lyrics(Album):
+    print()
     print(Album[0])
     print()
     requete = requests.get(Album[3])    # On prend l'URL
@@ -49,7 +50,7 @@ def get_lyrics(Album):
         if ' by\xa0' in nom :
             nom = nom[:nom.index(' by\xa0')]
         piste = [nom.strip('\u200b'), p['href']]
-        print(piste)
+        print('\t', piste[0])
 
 #%% Paroles selon le titre
         requete = requests.get(piste[1]) # On récupère l'URL de la piste
@@ -64,6 +65,10 @@ def get_lyrics(Album):
             section = soup.find("div", "lyrics")
         
         Lyrics = section.p
+        
+        if Lyrics == None:  # Parfois on a une page sans lyrics
+            break
+        
         for child in Lyrics.children:
             if child.name == 'annotatable-image':   # On évite la balise de pub
                 Lyrics = Lyrics.next_sibling
@@ -97,19 +102,17 @@ def get_lyrics(Album):
                     Paroles.append(str(string))
                     temp +=1
                     
-        print("Nombre de lignes :", len(Paroles))
-        print()
+        print('\t' + '\t' + "Nombre de lignes :", len(Paroles))
         piste.append(Paroles)
         Album.append(piste)
         
 #%% Scraping
-                    
+
 Albums = get_albums(Artiste)
 for i in Albums :
     print(i)
 print()
 print("#---------------------------#")
-print()
 for i in Albums :
     get_lyrics(i)
 
@@ -160,11 +163,12 @@ def mapper(Paroles) : # Entrée tableau des lignes
     Nb_je = 0
     for line in Paroles :
         line = line.strip()     # On retire les espaces avant et après
+        line = line.translate(str.maketrans('', '', Ponct)) # On retire la ponctuation
+        line = line.replace('-', ' ') # On remplace les tirets par des espaces
         words = line.split()    # On sépare les mots
 
         
         for word in words :
-            word = word.translate(str.maketrans('', '', Ponct))
             word = word.replace('’', "'")
             word = word.replace('œ', "oe")
             if word == "":
@@ -186,7 +190,8 @@ def mapper(Paroles) : # Entrée tableau des lignes
                             Nb_je += 1
                 if word == word_bef:    # Si aucune oppération n'a été effectuée sur le mot, on a fini
                     nettoyage = False
-    
+            if word == "":
+                break               # Si la chaîne est vide, ça dégage
             Map.append('%s\t%s' % (word, 1))
             
     Map.sort()
@@ -201,6 +206,13 @@ def reducer(Map):
 
     for line in Map :
         line = line.strip()
+        #print(line)
+        
+        try:
+            line[:1] != '\t'
+        except ValueError:
+            continue
+        
         word, count = line.split('\t', 1)
     
         try:    
@@ -233,7 +245,7 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
-Ponct = '!"#$%&\()*+,-./:;<=>?@[\\]^_`{|}~'
+Ponct = '!"#$%&\()*+,./:;<=>?@[\\]^_`{|}~—'
 
 # On classe les mots sur tout l'album [0]
 for Album in Albums:
@@ -247,7 +259,7 @@ for Album in Albums:
     print('#---------------------------#')
     print()
     Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
-    #print(Reduce_ordered)
+    print(Reduce_ordered)
     #print()
     if 'je' in Reduce :
         Nb_je += Reduce['je']
