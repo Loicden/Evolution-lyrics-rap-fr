@@ -96,6 +96,9 @@ def get_lyrics(Album):
                     #print('\t',string)
                     Paroles.append(str(string))
                     temp +=1
+                    
+        print("Nombre de lignes :", len(Paroles))
+        print("#####")
         piste.append(Paroles)
         Album.append(piste)
         
