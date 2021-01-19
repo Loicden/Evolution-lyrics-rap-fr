@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Loud' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Primero' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -120,46 +120,6 @@ print("#---------------------------#")
 for i in Albums :
     get_lyrics(i)
 
-#%% Test de paroles selon le titre
-'''
-Lien = "https://genius.com/Nepal-jugements-lyrics"
-#Lien = "https://genius.com/8850558"
-requete = requests.get(Lien)
-page = requete.content
-soup = BeautifulSoup(page, 'html.parser')
-section = soup.find("div", "lyrics")
-
-while type(section) is not bs4.element.Tag:
-    requete = requests.get(Lien)
-    page = requete.content
-    soup = BeautifulSoup(page, 'html.parser')
-    section = soup.find("div", "lyrics")
-
-Lyrics = section.p
-for child in Lyrics.children:
-    if child.name == 'annotatable-image':
-        Lyrics = Lyrics.next_sibling
-        while Lyrics.name != 'p':
-            Lyrics = Lyrics.next_sibling
-            
-Paroles = []
-ignore = False
-for string in Lyrics.descendants:
-    if string == "\n" or string =="," or string ==", ":
-        pass
-    elif type(string) is bs4.element.NavigableString:
-        string = string.replace('\n', '')
-        if string[0] == '[' and string[-1] == ']':
-            pass
-        elif string[0] == '[':
-            ignore = True
-        elif ']' in string :
-            ignore = False
-        elif ignore == True :
-            pass
-        else:
-            Paroles.append(str(string))
-'''
 #%% Mapper
 def mapper(Paroles) : # Entrée tableau des lignes
     Map = []
@@ -249,7 +209,7 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
-Ponct = '!"#$%&\()*+,./:;<=>?@[\\]^_`{|}~—'
+Ponct = '!"#$%&\()*+,./:;<=>?@[\\]^_`{|}~—«»'
 
 # On classe les mots sur tout l'album [0]
 for Album in Albums:
