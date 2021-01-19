@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Alphawann' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Nepal' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -98,7 +98,7 @@ def get_lyrics(Album):
                     temp +=1
                     
         print("Nombre de lignes :", len(Paroles))
-        print("#####")
+        print()
         piste.append(Paroles)
         Album.append(piste)
         
@@ -110,7 +110,8 @@ for i in Albums :
 print()
 print("#---------------------------#")
 print()
-get_lyrics(Albums[0])
+for i in Albums :
+    get_lyrics(i)
 
 #%% Test de paroles selon le titre
 '''
@@ -235,19 +236,19 @@ Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 Ponct = '!"#$%&\()*+,-./:;<=>?@[\\]^_`{|}~'
 
 # On classe les mots sur tout l'album [0]
-Lyrics_album = []
-for i in Albums[0]:
-    Lyrics_album += i[-1]
-Map, Nb_je = mapper(Lyrics_album)
-Reduce = reducer(Map)
-
-print()
-print('#---------------------------#')
-print()
-Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
-print(Reduce_ordered)
-
-print()
-if 'je' in Reduce :
-    Nb_je += Reduce['je']
-print('Nombre de "je" :', Nb_je)
+for Album in Albums:
+    Lyrics_album = []
+    for i in Album:
+        Lyrics_album += i[-1]
+    Map, Nb_je = mapper(Lyrics_album)
+    Reduce = reducer(Map)
+    
+    print()
+    print('#---------------------------#')
+    print()
+    Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
+    #print(Reduce_ordered)
+    #print()
+    if 'je' in Reduce :
+        Nb_je += Reduce['je']
+    print('Nombre de "je" :', Nb_je, "sur", len(Album), "titres ; soit", Nb_je/len(Album), '"je" par titre.' )
