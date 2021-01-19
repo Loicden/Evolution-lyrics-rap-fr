@@ -10,7 +10,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Vald' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Damso' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -43,8 +43,7 @@ def get_lyrics(Album):
         for string in p.h3.stripped_strings:
             if string != "Lyrics":  # On passe la première ligne "Lyrics"
                 if '(' in string :  # On récupère le nom de la piste en retirant l'artiste en feat s'il y en a un
-                    ind = string.index('(')
-                    nom = string[:ind-1]
+                    nom = string[:string.index('(')-1]
                 else :
                     nom = string
         if ' by\xa0' in nom :
@@ -56,6 +55,11 @@ def get_lyrics(Album):
         requete = requests.get(piste[1]) # On récupère l'URL de la piste
         page = requete.content
         soup = BeautifulSoup(page, 'html.parser')
+        
+        Nfound = soup.find("div", "render_404") # Parfois, la page est référencée mais n'existe pas encore
+        if Nfound != None:
+            continue
+        
         section = soup.find("div", "lyrics")
         
         while type(section) is not bs4.element.Tag: # Parfois le chargement ne fonctionne pas, on recommence tant que c'est le cas
@@ -67,7 +71,7 @@ def get_lyrics(Album):
         Lyrics = section.p
         
         if Lyrics == None:  # Parfois on a une page sans lyrics
-            break
+            continue
         
         for child in Lyrics.children:
             if child.name == 'annotatable-image':   # On évite la balise de pub
@@ -241,7 +245,7 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'fait', 'font', 'ici', 'ils', 'irai', 'la', 'le', 'les', 
               'ma', 'mais', 'me', 'mes', 'mon', 'ne', 'nos', 'notre', 'on', 'ou', 'où',
               'pas', 'plus', "p't'être", "p't-être", 'que', 'qui',
-              'sa', 'si', 'sur', 'suis', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
+              'sa', 'sans', 'si', 'sont', 'sur', 'suis', 'ta', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
