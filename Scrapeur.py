@@ -11,7 +11,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = '47ter' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Nekfeu' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -234,5 +234,5 @@ for Album in Albums:
     for i in Reduce_ordered:
         print(i, '\t', Reduce_ordered[i])
         temp += 1
-        if temp > 10:
+        if temp > 20: # Nb de mots à afficher
             break
