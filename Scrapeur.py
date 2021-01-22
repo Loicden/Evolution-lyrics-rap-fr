@@ -4,13 +4,14 @@ import requests
 import itertools
 import re
 import string
+import pprint
 from collections import OrderedDict
 from operator import itemgetter
 import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Primero' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = '47ter' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -21,6 +22,8 @@ def get_albums(Artiste):
     Albums = []     # Liste des albums de l'artiste
     for alb in soup.find_all('a', "vertical_album_card", href=True):
         date = alb.find('div', 'vertical_album_card-info')
+        if type(date.div) is not bs4.element.Tag :
+            continue
         date = str(date.div.string)
         date = date.replace('\n', '')
         date = date.replace(' ', '')
@@ -202,7 +205,7 @@ Dict_contractions = {"f'nêtre": 'fenêtre'}
 Dict_argot = {"gole-ri": "drôle", "cons'": 'conso'}
 Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'dans', 'de', 'des', 'dit', 'du', 'en', 'est', 'et', 'faire', 'fais',
-              'fait', 'font', 'ici', 'ils', 'irai', 'la', 'le', 'les', 
+              'fait', 'font', 'ici', 'ils', 'irai', 'la', 'les', 
               'ma', 'mais', 'me', 'mes', 'mon', 'ne', 'nos', 'notre', 'on', 'ou', 'où',
               'pas', 'plus', "p't'être", "p't-être", 'que', 'qui',
               'sa', 'sans', 'si', 'sont', 'sur', 'suis', 'ta', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
@@ -218,13 +221,18 @@ for Album in Albums:
         Lyrics_album += i[-1]
     Map, Nb_je = mapper(Lyrics_album)
     Reduce = reducer(Map)
-    
+    if Nb_je != 0:
+        if 'je' in Reduce :
+            Reduce['je'] += Nb_je
+        else:
+            Reduce['je'] = Nb_je
     print()
     print('#---------------------------#')
     print()
     Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
-    print(Reduce_ordered)
-    #print()
-    if 'je' in Reduce :
-        Nb_je += Reduce['je']
-    print('Nombre de "je" :', Nb_je, "sur", len(Album), "titres ; soit", Nb_je/len(Album), '"je" par titre.' )
+    temp = 0
+    for i in Reduce_ordered:
+        print(i, '\t', Reduce_ordered[i])
+        temp += 1
+        if temp > 10:
+            break
