@@ -12,7 +12,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Nekfeu' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Booba' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -233,14 +233,15 @@ for Album in Albums:
     print()
     Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
     temp = 0
-    while temp < 20 :
-        for i in Reduce_ordered:
-            print(i, '\t', Reduce_ordered[i])
-            temp += 1
+    for i in Reduce_ordered:
+        print(i, '\t', Reduce_ordered[i])
+        temp += 1
+        if temp > 20: # Nb de mots qu'on veut afficher
+            break
     print()
-    print("En moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
+    print(len(Album)-4, "titres, en moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
 
 #%% Création des CSV
-    with io.open(Artiste + '_' + Album[0] + '_' + Album[2] + '.csv', 'w', encoding="utf-8") as f:
+    with io.open(Artiste + '_' + Album[0].replace('/', '') + '_' + Album[2] + '.csv', 'w', encoding="utf-8") as f:
         for key in Reduce_ordered.keys():
             f.write("%s,%s\n"%(key,Reduce_ordered[key]))
