@@ -5,6 +5,7 @@ import itertools
 import re
 import string
 import pprint
+import io
 from collections import OrderedDict
 from operator import itemgetter
 import bs4
@@ -157,6 +158,7 @@ def mapper(Paroles) : # Entrée tableau des lignes
                             Nb_je += 1
                 if word == word_bef:    # Si aucune oppération n'a été effectuée sur le mot, on a fini
                     nettoyage = False
+
             if word == "":
                 break               # Si la chaîne est vide, ça dégage
             Map.append('%s\t%s' % (word, 1))
@@ -231,8 +233,14 @@ for Album in Albums:
     print()
     Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
     temp = 0
-    for i in Reduce_ordered:
-        print(i, '\t', Reduce_ordered[i])
-        temp += 1
-        if temp > 20: # Nb de mots à afficher
-            break
+    while temp < 20 :
+        for i in Reduce_ordered:
+            print(i, '\t', Reduce_ordered[i])
+            temp += 1
+    print()
+    print("En moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
+
+#%% Création des CSV
+    with io.open(Artiste + '_' + Album[0] + '_' + Album[2] + '.csv', 'w', encoding="utf-8") as f:
+        for key in Reduce_ordered.keys():
+            f.write("%s,%s\n"%(key,Reduce_ordered[key]))
