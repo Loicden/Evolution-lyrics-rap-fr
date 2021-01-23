@@ -12,7 +12,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Booba' #Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Lomepal' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -36,7 +36,7 @@ def get_albums(Artiste):
 #%% Pistes selon l'album
 def get_lyrics(Album):
     print()
-    print(Album[0])
+    print(Album)
     print()
     requete = requests.get(Album[3])    # On prend l'URL
     page = requete.content
@@ -80,15 +80,20 @@ def get_lyrics(Album):
         for child in Lyrics.children:
             if child.name == 'annotatable-image':   # On évite la balise de pub
                 Lyrics = Lyrics.next_sibling
+                if type(Lyrics) is not bs4.element.Tag :
+                    continue 
                 while Lyrics.name != 'p':
                     Lyrics = Lyrics.next_sibling
+                    
+        if type(Lyrics) is not bs4.element.Tag : # Il n'y a pas de lyrics
+            continue
         
         Paroles = []
-        temp = 0    # Clic d'arrêt pour les tests
+        #temp = 0    # Clic d'arrêt pour les tests
         ignore = False  # Utile pour ne pas prendre les indications de noms de parties, ou d'artistes qui chante
         for string in Lyrics.descendants:
-            if temp > 1000 :
-                break
+            #if temp > 1000 :
+                #break
             if string == "\n" or string =="," or string ==", ":
                 pass
             elif type(string) is bs4.element.NavigableString: # On évite la balise de lien vers un commentaire
@@ -108,11 +113,12 @@ def get_lyrics(Album):
                 else:
                     #print('\t',string)
                     Paroles.append(str(string))
-                    temp +=1
+                    #temp +=1
                     
         print('\t' + '\t' + "Nombre de lignes :", len(Paroles))
-        piste.append(Paroles)
-        Album.append(piste)
+        if Paroles != []:
+            piste.append(Paroles)
+            Album.append(piste)
         
 #%% Scraping
 
@@ -121,8 +127,8 @@ for i in Albums :
     print(i)
 print()
 print("#---------------------------#")
-for i in Albums :
-    get_lyrics(i)
+for Album in Albums :
+    pistes = get_lyrics(Album)
 
 #%% Mapper
 def mapper(Paroles) : # Entrée tableau des lignes
@@ -206,11 +212,12 @@ def reducer(Map):
 Dict_contractions = {"f'nêtre": 'fenêtre'}
 Dict_argot = {"gole-ri": "drôle", "cons'": 'conso'}
 Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
-              'dans', 'de', 'des', 'dit', 'du', 'en', 'est', 'et', 'faire', 'fais',
-              'fait', 'font', 'ici', 'ils', 'irai', 'la', 'les', 
+              'dans', 'de', 'des', 'dit', 'du', 'en', 'est', 'es', 'et', 'faire', 'fais',
+              'fait', 'font', 'ici', 'ils', 'irai', 'la', 'le', 'les', 
               'ma', 'mais', 'me', 'mes', 'mon', 'ne', 'nos', 'notre', 'on', 'ou', 'où',
               'pas', 'plus', "p't'être", "p't-être", 'que', 'qui',
-              'sa', 'sans', 'si', 'sont', 'sur', 'suis', 'ta', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
+              'sa', 'son', 'se', 'ses', 'sans', 'si', 'sont', 'sur', 'suis', 'ta',
+              'te', 'tes', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
@@ -230,6 +237,7 @@ for Album in Albums:
             Reduce['je'] = Nb_je
     print()
     print('#---------------------------#')
+    print(Album[0])
     print()
     Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
     temp = 0
