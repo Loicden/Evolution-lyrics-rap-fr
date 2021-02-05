@@ -1,0 +1,43 @@
+Résumés des réunions
+
+5 FEVRIER:
+
+On modifie le scrapper pour normaliser par musique plutôt que par album (ie pour chaque mot avoir le nombre de fois qu'il apparaît sur le nombre de mots dans la musique). 
+
+(On pourra multiplier les proportions des mots des musiques d'un même album pour avoir les occurrences par album)
+
+On ajoute des artistes/albums pour avoir plus de données (et on refait avec le nouveau scrapper ceux qui avaient déjà été faits).
+
+Une fois qu'on aura plus d'artistes, on devrait pouvoir revoir/enrichir les champs lexicaux.
+
+Visualisations éventuelles:
+
+Regarder si on trouve des algos tout faits d'analyse de sentiments. Permettrait de déterminer le style des artistes (éventuellement rapprocher les artistes avec le même style ou faire des nuages de mots avec une couleur pour le positif et une pour le négatif)
+
+Regarder si y a des algos tout fait (par exemple t-SNE) qui permettrait de rapprocher les artistes (ou les musiques/albums) qui utilisent souvent les mêmes thèmes/champs lexicaux. 
+
+-stacked bar chart ou radar chart pour visualiser les 5 premiers champs lexicaux en fonction des années et éventuellement en filtrant sur des artistes)
+
+-treemap pour visualiser les champs lexicaux
+
+-scatterplot avec la "richesse/diversité" de vocabulaire des artistes (peut-être pas pertinent, mais probablement facile à faire avec la fonction "set" de python)
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+
+MI-JANVIER :
+
+-bdd sur une 20aine d'années, environ 10 artistes par année (on ajustera au besoin), 6 albums par atiste max
+
+-2 reducers pour 2 fichiers csv : 1 par atiste et année et l'autre pour chaque année (javscript sert juste de filtre)
+
+-viz : histogramme champs lexicaux par année / par artiste
+
+-champs lexicaux faits à la main
+
+-on stocke les paroles dans un fichier texte (a mettre sur github), qu'on reparcourera après pour appliquer le reducer. 
+
+-on laisse les refrains apparaitre plusieurs fois
+
+-on peut récupérer des dictionnaires de stop words tout faits (par exemple sur https://countwordsfree.com/stopwords/french)
+
+-Loic met son code sur github qd le pb des pubs sera réglé
