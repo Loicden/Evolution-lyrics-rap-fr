@@ -12,7 +12,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'artiste
-Artiste = 'Lomepal' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'SCH' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
