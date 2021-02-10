@@ -250,10 +250,10 @@ Ponct = '!"#$%&\()*+,./:;<=>?@[\\]^_`{|}~—«»'
 
 # On classe les mots sur tout l'album [0]
 for Album in Albums:
-    Lyrics_album = []
     print()
     print('#---------------------------#')
     print(Album[0])
+    Reduce_album = {}
     for i in Album[4:]:
         Map, Nb_je = mapper(i[-1])
         Reduce = reducer(Map)
@@ -263,24 +263,28 @@ for Album in Albums:
             else:
                 Reduce['je'] = Nb_je
         i.append(Reduce)
-        i.append(Nb_je)
-        print()
-        print(i[0])
-        print()        
+        i.append(Nb_je)       
         total = sum(Reduce.values(), 0.0)
         Reduce = {k: v / total for k, v in Reduce.items()}
         
-        Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
-        temp = 0
-        for i in Reduce_ordered:
-            print(i, '\t', Reduce_ordered[i])
-            temp += 1
-            if temp > 5: # Nb de mots qu'on veut afficher
-                break
-        #print(len(Album)-4, "titres, en moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
-"""
+        if Reduce_album == {}:
+            Reduce_album = Reduce
+        else:
+            Reduce_album = {k: Reduce_album.get(k, 0) + Reduce.get(k, 0) 
+                            for k in set(Reduce_album) | set(Reduce)}
+
+    total = sum(Reduce_album.values(), 0.0)
+    Reduce_album = {k: v / total for k, v in Reduce_album.items()}
+
+    Reduce_ordered = OrderedDict(sorted(Reduce_album.items(), key = itemgetter(1), reverse = True))
+    temp = 0
+    for i in Reduce_ordered:
+        print(i, '\t', Reduce_ordered[i])
+        temp += 1
+        if temp > 5: # Nb de mots qu'on veut afficher
+            break
+    
 #%% Création des CSV
     with io.open(Artiste + '_' + Album[0].replace('/', '') + '_' + Album[2] + '.csv', 'w', encoding="utf-8") as f:
         for key in Reduce_ordered.keys():
             f.write("%s,%s\n"%(key,Reduce_ordered[key]))
-"""
