@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb 10 10:20:26 2021
+
+@author: Loïc
+"""
 import os
 import csv
 import requests
@@ -10,16 +16,34 @@ from collections import OrderedDict
 from operator import itemgetter
 import bs4
 from bs4 import BeautifulSoup
-
+"""
+from contextlib import closing
+from selenium.webdriver import Firefox # pip install selenium
+from selenium.webdriver.support.ui import WebDriverWait
+from BeautifulSoup import BeautifulSoup
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+"""
 #%% Nom de l'artiste
-Artiste = 'SCH' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Nepal' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
     requete = requests.get("https://genius.com/artists/" + Artiste)
     page = requete.content
     soup = BeautifulSoup(page, features="lxml")
-    
+    """
+    with closing(Firefox()) as driver:
+        driver.get("https://genius.com/artists/" + Artiste)
+        button = driver.find_element_by_id('full_width_button u-clickable u-quarter_top_margin')
+        button.click()
+        # wait for the page to load
+        element = WebDriverWait(driver, 10).until(
+        EC.invisibility_of_element_located((By.ID, "deviceShowAllLink"))
+        )
+        # store it to string variable
+        page_source = driver.page_source
+    """
     Albums = []     # Liste des albums de l'artiste
     for alb in soup.find_all('a', "vertical_album_card", href=True):
         date = alb.find('div', 'vertical_album_card-info')
@@ -125,6 +149,7 @@ def get_lyrics(Album):
 Albums = get_albums(Artiste)
 for i in Albums :
     print(i)
+
 print()
 print("#---------------------------#")
 for Album in Albums :
@@ -226,30 +251,36 @@ Ponct = '!"#$%&\()*+,./:;<=>?@[\\]^_`{|}~—«»'
 # On classe les mots sur tout l'album [0]
 for Album in Albums:
     Lyrics_album = []
-    for i in Album:
-        Lyrics_album += i[-1]
-    Map, Nb_je = mapper(Lyrics_album)
-    Reduce = reducer(Map)
-    if Nb_je != 0:
-        if 'je' in Reduce :
-            Reduce['je'] += Nb_je
-        else:
-            Reduce['je'] = Nb_je
     print()
     print('#---------------------------#')
     print(Album[0])
-    print()
-    Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
-    temp = 0
-    for i in Reduce_ordered:
-        print(i, '\t', Reduce_ordered[i])
-        temp += 1
-        if temp > 20: # Nb de mots qu'on veut afficher
-            break
-    print()
-    print(len(Album)-4, "titres, en moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
-
+    for i in Album[4:]:
+        Map, Nb_je = mapper(i[-1])
+        Reduce = reducer(Map)
+        if Nb_je != 0:
+            if 'je' in Reduce :
+                Reduce['je'] += Nb_je
+            else:
+                Reduce['je'] = Nb_je
+        i.append(Reduce)
+        i.append(Nb_je)
+        print()
+        print(i[0])
+        print()        
+        total = sum(Reduce.values(), 0.0)
+        Reduce = {k: v / total for k, v in Reduce.items()}
+        
+        Reduce_ordered = OrderedDict(sorted(Reduce.items(), key = itemgetter(1), reverse = True))
+        temp = 0
+        for i in Reduce_ordered:
+            print(i, '\t', Reduce_ordered[i])
+            temp += 1
+            if temp > 5: # Nb de mots qu'on veut afficher
+                break
+        #print(len(Album)-4, "titres, en moyenne", Reduce['je']/(len(Album)-4), "'je' par titre.")
+"""
 #%% Création des CSV
     with io.open(Artiste + '_' + Album[0].replace('/', '') + '_' + Album[2] + '.csv', 'w', encoding="utf-8") as f:
         for key in Reduce_ordered.keys():
             f.write("%s,%s\n"%(key,Reduce_ordered[key]))
+"""
