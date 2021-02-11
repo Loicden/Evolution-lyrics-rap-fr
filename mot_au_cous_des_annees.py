@@ -27,7 +27,7 @@ def fusion_annee(mot):
                 linereader = csv.reader(csvfile, delimiter=',', quotechar='|')
                 for row in linereader:
                     word = row[0]
-                    count = int(row[1])
+                    count = float(row[1])
                     if word == mot :
                         dic.update({annee : count})
                         break

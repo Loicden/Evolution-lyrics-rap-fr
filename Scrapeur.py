@@ -25,7 +25,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 """
 #%% Nom de l'artiste
-Artiste = 'Pnl' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Booba' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):

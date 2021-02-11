@@ -15,7 +15,8 @@ annees = [1980+i for i in range(41)]
 def fusion_annee(ANNEE): 
 
         fichiers = [f for f in os.listdir(Path) if f.endswith(str(ANNEE)+".csv") and not f.startswith("albums")]
-        if len(fichiers) == 0:
+        Nbfichiers = len(fichiers)
+        if  Nbfichiers == 0:
             return 
         
         
@@ -28,9 +29,9 @@ def fusion_annee(ANNEE):
                     word = row[0]
                     count = float(row[1])
                     if word not in dic.keys():
-                        dic.update({word : count})
+                        dic.update({word : count/Nbfichiers})
                     else :
-                        dic[word] += count
+                        dic[word] += count/Nbfichiers
         dic = OrderedDict(sorted(dic.items(), key=lambda t: t[0]))
         sortedDict = OrderedDict(sorted(dic.items(), key=lambda t: t[1], reverse=True))
                     
