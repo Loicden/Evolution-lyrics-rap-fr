@@ -1,5 +1,9 @@
 Résumés des réunions
 
+12 FEVRIER : 
+
+https://genius.com/Genius-france-dictionnaire-des-mots-dargot-francais-annotated 
+
 5 FEVRIER:
 
 On modifie le scrapper pour normaliser par musique plutôt que par album (ie pour chaque mot avoir le nombre de fois qu'il apparaît sur le nombre de mots dans la musique). 
