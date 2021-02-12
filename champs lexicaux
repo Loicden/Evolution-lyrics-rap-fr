@@ -1,36 +1,40 @@
-argent = [gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, sous, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu]
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, sous, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu]
 
-violence = [coup, coups, cogne, meurt, meurs, mourir, mort, die, tuerais, crève, cimetière, balles, armé, peur, guerre, crime, tombé, gang, clan, rivaliser, venger, vengeance, couteau, couteaux, fanatiques, coupe, létale, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, flingue, flingues, brûler, mafia, feu, fumée, menottes, blesser, cadavres, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, revolvers, fusil, barrières, camo, caméra, casseurs, headshot, torture, bute]
+mort = [mort, meurt, meurs, mourir, die, tuerais, crève, cimetière, létale, cadavres]
 
-personnes = [homme, hommes, criminel, gangster, ennemi, ennemis, enemy, thug, coupable, voyous, bandit, gars, traîtres, guerrier, mec, mecs, gagnant, boy, aventurier, gava, gavas, reuf]
+violence = [coup, coups, cogne, peur, guerre, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, coupe, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, camo, caméra, casseurs, torture, bute]
+
+armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot]
 
 musique = [rap, mélodie, paroles, album, musique, music, son, rappeur, mots, chansons, chante, couplet, disques, rime, dj, airs, concerts, club, voix, instru, vinyle]
+
+personnes = [homme, hommes, criminel, gangster, ennemi, ennemis, enemy, thug, coupable, voyous, bandit, gars, traîtres, guerrier, mec, mecs, gagnant, boy, aventurier, gava, gavas, reuf]
 
 musique_termes_spécifiques = [92i, izi, kalash, boulbi, django]
 
 concepts_abstraits = [paix, question, questions, vérité, life, vie, vivre, futur, future, avenir, destin, monde, loi, âme, temps, années, chance, libre, rêve, esprit, conscience, sens, société]
 
+noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires]
+
+ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted]
+
 religieux = [mollah, jésus, halal, hallal, ciel, allah, dieu, enfer, paradis, démon, démons, diable, prophète, anges, priez]
 
 onomatopés = [wesh, ouais, yeah, hey, nan, no, oh, yo, ok, okay, eh, ah, ouaaais, uh, bah, youh, allo]
 
-ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted]
-
 lieux = [street, city, terre, bled, rue, ville, métro, hôtel, boîte, maison, parc, parcs, marseille, afrique, paris, paname, français, afghanistan]
 
-noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires]
-
-travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings]
-
-police = [flic, flics, keuf, cop]
+aime = [bien, pote, potes, poto, aime, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble]
 
 drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord]
 
 alcool = [alcool, bière, bistrot, alcoolique, bouteille, gin, vin, whisky, défoncé, boire, bois, cocktails, cocktail, canettes, scotch, bourrés, rre-ve, rres-ve]
 
-luxe = [maybach, diamants, millionnaire, or, luxe, palace]
+travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings]
 
-aime = [bien, pote, potes, poto, aime, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble]
+police = [flic, flics, keuf, cop]
+
+luxe = [maybach, diamants, millionnaire, or, luxe, palace]
 
 émotions/adjectifs_positif = [force, puissance, fier, honnête, respect, calme, zen, confiance, mérite]
 
@@ -38,7 +42,7 @@ aime = [bien, pote, potes, poto, aime, mieux, préféré, coeur, belle, love, am
 
 exagération = [toujours, rien, jamais, tellement, tous, trop, vraiment, aucun]
 
-** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, , merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitches]
+** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitches]
 
 je = [je, moi, oim, my]
 
