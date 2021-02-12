@@ -2,9 +2,27 @@ Résumés des réunions
 
 12 FEVRIER : 
 
+On a complété les champs lexicaux et créé un programme champs_lexicaux.py qui permet de trier les mots d'une année par champ lexicaux. On l'a appliqué à l'année 2020 ce qui a donné un fichier champs_2020.csv (pour chaque mot appartenant à un champ lexical déjà défini, donne le champ lexical auquel il appartient et sa proportion d'apparition dans l'année) et un fichier champs_restants 2020.csv qui donne tous les mots qui n'appartiennent pas encore à des champs lexicaux (triés par ordre de proportion d'apparition)
+
+Infos données par le prof : 
+
+le rendu (notebook observable) doit être constitué d'environ 4 graphes descriptifs de nos données + d'une visualisation principale (qui doit être mis en avant et accessible facilement, pas au 5eme click). La viz principale est la plus complexe, souvent non standard (par exemple avec une interaction particulière ou qui raconte une histoire). 
+La documentation est aussi très importante (constitue plus ou moins la moitié du rendu). Mettre les liens des fichiers python, éventuellement des prototypes papier. Expliquer ce qu'on a enlevé, ce qu'on a sélectionné, les différents layouts explorés... 
+Dans notre cas, il faudra détailler nos réflexions sur la normalisation pour pas introduire de biais, sur les difficultés liés au contexte d'un mot (noir = obscur ou black? sort = sortir ou le sort...) 
+
+
+Idées brainstormées :
+
+le site genius donne un dictionnaire d'argot qui pourrait être utile (soit pour nous donner des idées pour compléter les champs lexicaus, soit si on arrive à le scrapper pour étudier par exemple si certains rappers ont plus recours à l'argot que d'autres)
+
+Faire attention à ne pas extraire des albums en double (rééditions)
+
+
 https://genius.com/Genius-france-dictionnaire-des-mots-dargot-francais-annotated 
 
 Pour pouvoir comparer les champs lexicaux, on va additionner les prportions des 5 mots les plus utilisés dans chaque champs. Ainsi, on enlève le biais du fait que certains champs lexicaux sont plus riches que d'autres (et donc la somme serait plus importante). 
+
+ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 5 FEVRIER:
 
