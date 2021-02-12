@@ -6,6 +6,7 @@ On a complété les champs lexicaux et créé un programme champs_lexicaux.py qu
 
 Infos données par le prof : 
 
+le rendu est pour le 26/02 cad premier vendredi après les vacances. 
 le rendu (notebook observable) doit être constitué d'environ 4 graphes descriptifs de nos données + d'une visualisation principale (qui doit être mis en avant et accessible facilement, pas au 5eme click). La viz principale est la plus complexe, souvent non standard (par exemple avec une interaction particulière ou qui raconte une histoire). 
 La documentation est aussi très importante (constitue plus ou moins la moitié du rendu). Mettre les liens des fichiers python, éventuellement des prototypes papier. Expliquer ce qu'on a enlevé, ce qu'on a sélectionné, les différents layouts explorés... 
 Dans notre cas, il faudra détailler nos réflexions sur la normalisation pour pas introduire de biais, sur les difficultés liés au contexte d'un mot (noir = obscur ou black? sort = sortir ou le sort...) 
@@ -13,15 +14,46 @@ Dans notre cas, il faudra détailler nos réflexions sur la normalisation pour p
 
 Idées brainstormées :
 
+Pour pouvoir comparer les champs lexicaux, on va additionner les proportions des 5 mots les plus utilisés dans chaque champs. Ainsi, on enlève le biais du fait que certains champs lexicaux sont plus riches que d'autres (et donc la somme serait plus importante). 
+
 le site genius donne un dictionnaire d'argot qui pourrait être utile (soit pour nous donner des idées pour compléter les champs lexicaus, soit si on arrive à le scrapper pour étudier par exemple si certains rappers ont plus recours à l'argot que d'autres)
+https://genius.com/Genius-france-dictionnaire-des-mots-dargot-francais-annotated 
 
 Faire attention à ne pas extraire des albums en double (rééditions)
 
 
-https://genius.com/Genius-france-dictionnaire-des-mots-dargot-francais-annotated 
+Infos données par Théo:
+viz https://www.jasondavies.com/wordtree/?source=obama.inauguration.2013.txt&prefix=we
+sankey diagram
+Ce qu'il a dit : le nerf de la guerre c'est de trouver des choses à dire, quelles sont les tendances, quels artistes s'en écartent, qu'est ce qui est inattendu?
+Proposition : étudier la source d'un mot (ie est ce qu'un mot a été "lancé" par un artiste). On a décidé de pas faire ca car trop compliqué. De même on laisse tomber les co-occurrences...
 
-Pour pouvoir comparer les champs lexicaux, on va additionner les prportions des 5 mots les plus utilisés dans chaque champs. Ainsi, on enlève le biais du fait que certains champs lexicaux sont plus riches que d'autres (et donc la somme serait plus importante). 
 
+Là où on en est:
+
+Viz principale : évolution de la proportion des 5 premiers champs lexicaux par artiste (et par année) --> radar chart
+(si on clique sur la courbe de l'artiste, un tree map s'affiche avec une dizaine de champs lexicaux, et les mots des plus grands champs apparaissent. Quand tu sorvoles un mot, donne la proportion/surface dur rectangle) La tree map contient plus d'infos que la toile d'araignée, qui est une version plus générale des tree maps.
+
+Graphiques descriptifs : 
+cf photos conv discord
+-mots qui caractéristisent le vocabulaire d'un artiste (banquier pour Vald, anges pour PNL...)
+-"richesse de vocabulaire" d'un artiste
+-on sélectionne deux thématiques (opposées, par exemple amour et haine) et on affiche les artistes dans un plan avec en abscisse une des thématiques, en ordonnée l'autre pour voir comment ils se situent et faire ressortir des artistes qui ne suivent la diagonale/ se détachent de la tendance
+-les idées de la dernière fois (nuage de mots avec les mots les plus récurrents en plus gros...) 
+
+
+
+Doit faire :
+Pour avoir l'option "toutes années confondues" sur la toile d'araignée:
+D'abord faire un algo de fusion par artiste qui renvoie tous les mots (de tous les albums) et leurs proportions (moyenne). (Meme chose que l'algo de maxime sauf qu'on fait par artiste au lieu de par année). 
+Ensuite on applique la fonction champs_lexicaux.py pour avoir tous les mots de l'artiste classés par champ lexical. 
+
+Pour avoir une sélection par année sur la toile d'araignée:
+on fait que la deuxième étape (application de champs_lexicaux.py) sur les csv par albums.
+
+Le fait d'avoir fait comme ca permet d'additionner les 5 premiers mots de chaque champ lexical pour l'araignée.
+
+Faire les viz sur observable. 
 ooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
 
 5 FEVRIER:
