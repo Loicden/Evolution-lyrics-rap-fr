@@ -1,10 +1,10 @@
-argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, sous, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu]
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche]
 
-mort = [mort, meurt, meurs, mourir, die, tuerais, crève, cimetière, létale, cadavres]
+mort = [mort, meurt, meurs, mourir, décès, die, tuerais, crève, cimetière, létale, cadavres]
 
-violence = [coup, coups, cogne, peur, guerre, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, coupe, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, camo, caméra, casseurs, torture, bute]
+violence = [coup, coups, cogne, peur, guerre, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, coupe, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, casse, camo, caméra, casseurs, torture, bute, knockout]
 
-armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot]
+armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot, glock]
 
 musique = [rap, mélodie, paroles, album, musique, music, son, rappeur, mots, chansons, chante, couplet, disques, rime, dj, airs, concerts, club, voix, instru, vinyle]
 
@@ -22,37 +22,39 @@ religieux = [mollah, jésus, halal, hallal, ciel, allah, dieu, enfer, paradis, d
 
 onomatopés = [wesh, ouais, yeah, hey, nan, no, oh, yo, ok, okay, eh, ah, ouaaais, uh, bah, youh, allo]
 
-lieux = [street, city, terre, bled, rue, ville, métro, hôtel, boîte, maison, parc, parcs, marseille, afrique, paris, paname, français, afghanistan]
+lieux = [street, city, terre, bled, rue, ville, métro, hôtel, boîte, maison, parc, parcs, marseille, afrique, paris, paname, pays, français, afghanistan]
 
-aime = [bien, pote, potes, poto, aime, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble]
+aime = [aime, bien, pote, potes, poto, équipe, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble, soleil, bonheur]
 
-drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord]
+drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord, weed]
 
 alcool = [alcool, bière, bistrot, alcoolique, bouteille, gin, vin, whisky, défoncé, boire, bois, cocktails, cocktail, canettes, scotch, bourrés, rre-ve, rres-ve]
 
-travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings]
+travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings, carrière, salaire]
 
 police = [flic, flics, keuf, cop]
 
-luxe = [maybach, diamants, millionnaire, or, luxe, palace]
+luxe = [maybach, diamants, millionnaire, or, luxe, palace, porsche]
 
 émotions/adjectifs_positif = [force, puissance, fier, honnête, respect, calme, zen, confiance, mérite]
 
-émotions/adjectifs_négatif = [nerfs, soucis, crise, erreurs, souffert, souffrir, souffrance, triste, regrets, pire, stress, mal, larmes, peur, haine, marre, chagrin, mépris, seum, colère, envie, manque, rage, déshonneur, folie, fou, fous, sale, seul, personne, grosse, grave, faibles, faible, foutu, frustré, honte, énervé, errer, traîner, faute, feeling, dégoûté, douter, ennuis]
+émotions/adjectifs_négatif = [nerfs, soucis, crise, erreurs, souffert, souffrir, souffrance, triste, regrets, pire, seum, stress, risques, mal, larmes, peur, haine, marre, chagrin, mépris, seum, colère, envie, manque, rage, déshonneur, folie, fou, fous, sale, seul, personne, grosse, grave, faibles, faible, foutu, frustré, honte, énervé, errer, traîner, faute, feeling, dégoûté, douter, ennuis]
 
 exagération = [toujours, rien, jamais, tellement, tous, trop, vraiment, aucun]
 
-** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitches]
+** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitches, bite]
 
 je = [je, moi, oim, my]
 
-famille = [famille, mif', mama, maman, mère, mères, frère, frères, fils, grand-mère, grand-père, grands-parents, famille, daronne, garçon, pères, papa, enfant, enfants, mômes, gamins, soeur, cousin, couz', fillette]
+famille = [famille, mif', mif, miff, mama, maman, mère, mères, frère, frères, fils, grand-mère, grand-père, grands-parents, famille, daronne, garçon, pères, papa, enfant, enfants, mômes, gamins, soeur, cousin, couz', fillette]
 
 verlan = [rebeu, veau-cer, tur-fu, té-cô, trix-ma, seille-mar, screts-di, ients-cli, gol-mon, gent-ar, deur-vi, del-bor, cé-per, che-blan, ieux-sér, àl, oim, le-gueu, tit-pe, tass-pé, tard-pé, sser-ca, son-pri]
 
 femme = [celle-là, meuf, fe-meu, femme, elle, baby, bébé, nana, bonne, filles, girl, girlfriend, menteuse, bouffones, grosses]
 
-sanscategorie_reviennent_souvent = [sommeil, style, textes, dos, loin, weekend, système, jeu, nuit, nuits, vrai, pourquoi, yeux, poitrine, air, faut, prends, corps, histoires, face, game, crâne, choses, tête, croire, crois, fond, mêmes, toi, école, élève, important, essaye, vibe, inconnu]
+corps = [corps, main, joue, bouche, dents, poitrine, yeux, dos, oeil, nez, fesses, pieds, ied-p]
+
+sanscategorie_reviennent_souvent = [bulle, adieu, coeur, sommeil, style, textes, dos, loin, weekend, système, jeu, nuit, nuits, vrai, pourquoi, yeux, poitrine, air, faut, prends, corps, histoires, face, game, crâne, choses, tête, croire, crois, fond, mêmes, toi, école, élève, important, essaye, vibe, inconnu]
 
 sanscategorie2 = [attention, belek, folle, déteste, genre, smokin', avancer, bouteille, faux, faim, flow, flem, fois, jour, train, succès]
 
