@@ -1,0 +1,63 @@
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche]
+
+mort = [mort, meurt, meurs, mourir, décès, die, tuerais, crève, cimetière, létale, cadavres, kill, enterre, tue-moi]
+
+violence = [violent, violence, coup, coups, cogne, peur, guerre, guérilla, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, bleus, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, casse, camo, caméra, casseurs, torture, bute, knockout]
+
+armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot, glock]
+
+musique = [musique, rap, mélodie, paroles, album, musique, music, son, rappeur, mots, chansons, chante, couplet, disque, disques, rime, dj, airs, concerts, club, voix, instru, vinyle, pop]
+
+personnes = [man, homme, hommes, criminel, gangster, ennemi, ennemis, enemy, thug, coupable, voyous, bandit, gars, traîtres, guerrier, mec, mecs, gagnant, boy, aventurier, gava, gavas, reuf]
+
+musique_termes_spécifiques = [92i, izi, kalash, boulbi, django]
+
+concepts_abstraits = [paix, question, questions, vérité, life, vie, vivre, futur, future, avenir, destin, monde, loi, âme, temps, années, chance, libre, rêve, esprit, conscience, sens, société]
+
+noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires]
+
+ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted, roi, chevalier, capitaine]
+
+religieux = [mollah, jésus, halal, hallal, ciel, allah, dieu, enfer, paradis, démon, démons, diable, prophète, anges, priez]
+
+onomatopés = [wesh, ouais, yeah, hey, nan, no, oh, yo, ok, okay, eh, ah, ouaaais, uh, bah, youh, allo]
+
+lieux = [street, city, terre, bled, rue, ville, quartier, terrain, métro, hôtel, boîte, maison, parc, parcs, marseille, afrique, paris, paname, pays, voyage, français, maroc, afghanistan, amsterdam]
+
+aime = [aime, bien, pote, potes, poto, homie, équipe, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble, soleil, bonheur]
+
+drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord, weed, kush, cartel]
+
+alcool = [alcool, tise, champagne, bière, bistrot, alcoolique, bouteille, gin, vin, whisky, défoncé, boire, bois, cocktails, cocktail, canettes, scotch, bourrés, , bois, rre-ve, rres-ve]
+
+travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings, carrière, salaire]
+
+police = [flic, flics, keuf, cop]
+
+luxe = [maybach, diamants, millionnaire, or, luxe, palace, porsche, gucci, villa]
+
+émotions/adjectifs_positif = [force, puissance, fier, honnête, respect, calme, zen, confiance, mérite]
+
+émotions/adjectifs_négatif = [insomnie, mélancolie, minable, inquiète, nerfs, soucis, crise, erreurs, souffert, souffrir, souffrance, triste, regrets, pire, seum, stress, risques, mal, larmes, peur, haine, marre, chagrin, mépris, seum, colère, envie, manque, rage, déshonneur, folie, fou, fous, sale, seul, personne, grosse, grave, faibles, faible, foutu, frustré, honte, énervé, errer, traîner, faute, feeling, dégoûté, douter, ennuis, ténébreux, remords]
+
+exagération = [toujours, rien, jamais, tellement, tous, trop, vraiment, aucun]
+
+** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitch, bitches, bite]
+
+je = [je, moi, oim, my]
+
+famille = [famille, mif', mif, miff, mama, maman, mère, mères, frère, frères, frérot, fils, grand-mère, grand-père, grands-parents, famille, daronne, garçon, pères, papa, enfant, enfants, child, mômes, gamins, soeur, cousin, couz', fillette]
+
+verlan = [rebeu, veau-cer, tur-fu, té-cô, trix-ma, seille-mar, screts-di, ients-cli, gol-mon, gent-ar, deur-vi, del-bor, cé-per, che-blan, ieux-sér, àl, oim, le-gueu, tit-pe, tass-pé, tard-pé, sser-ca, son-pri]
+
+femme = [celle-là, meuf, madame, fe-meu, femme, elle, baby, bébé, copine, nana, bonne, jolie, filles, girl, girlfriend, menteuse, bouffones, grosses, pétasse]
+
+corps = [corps, main, joue, bouche, bouches, dents, poitrine, yeux, dos, oeil, nez, fesses, pieds, ied-p, talons, thighs, visage]
+
+sanscategorie_reviennent_souvent = [game, minuit, dansé, danse, jeune, bulle, adieu, coeur, sommeil, style, textes, dos, loin, weekend, système, jeu, nuit, nuits, vrai, pourquoi, yeux, poitrine, air, faut, prends, corps, histoires, face, game, crâne, choses, tête, croire, crois, fond, mêmes, toi, école, élève, important, essaye, vibe, inconnu]
+
+sanscategorie2 = [pirate, impossible, attention, belek, folle, déteste, genre, smokin', avancer, bouteille, faux, faim, flow, flem, fois, jour, train, succès]
+
+sanscategorie3 = [photos, coix, humeur, emoji, café, parler, pulsions, why, passe, choisi, peux, vice, connu, comprendre, demain, ennuies, refuses, longue, ligne, ko, hardcore, oublier, malade, traces]
+
+
