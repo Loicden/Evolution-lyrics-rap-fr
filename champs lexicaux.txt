@@ -1,4 +1,6 @@
-argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche]
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche, kichta, plata, illet-bi]
+
+street = [binks, bendo, bloc, bitume, terrain, rain-té]
 
 mort = [mort, meurt, meurs, mourir, décès, die, tuerais, crève, cimetière, létale, cadavres, kill, enterre, tue-moi]
 
