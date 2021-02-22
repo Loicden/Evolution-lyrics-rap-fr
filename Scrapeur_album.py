@@ -24,16 +24,30 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Nom de l'album
-Album = ['Mauvais œil', 'Lunatic', '2000', 'https://genius.com/albums/Lunatic/Mauvais-il'] 
+Album_url = 'https://genius.com/albums/Lunatic/Mauvais-il'
+Album = []
 
 #%% Pistes selon l'album
-def get_lyrics(Album):
+def get_lyrics(Album_url):
     print()
-    requete = requests.get(Album[3])    # On prend l'URL
+    requete = requests.get(Album_url)    # On prend l'URL
     page = requete.content
     soup = BeautifulSoup(page, features="lxml")
     
     Pistes = []     # Liste des pistes de l'album
+    
+    Titre = soup.find('h1', 'header_with_cover_art-primary_info-title header_with_cover_art-primary_info-title--white').string
+    print(Titre)
+    Artiste = soup.find('a', 'header_with_cover_art-primary_info-primary_artist').string
+    print(Artiste)
+    Date = soup.find('div', 'metadata_unit').string[-4:]
+    print(Date)
+    
+    Album.append(Titre)
+    Album.append(Artiste)
+    Album.append(Date)
+    Album.append(Album_url)
+    
     for p in soup.find_all("a", "u-display_block", href=True):
         for string in p.h3.stripped_strings:
             if string != "Lyrics":  # On passe la première ligne "Lyrics"
@@ -113,7 +127,7 @@ def get_lyrics(Album):
         
 #%% Scraping
 
-pistes = get_lyrics(Album)
+pistes = get_lyrics(Album_url)
 
 #%% Mapper
 def mapper(Paroles) : # Entrée tableau des lignes
