@@ -125,6 +125,9 @@ def get_lyrics(Album):
                 if string[0] == '[' and string[-1] == ']':
                     #print("IGNORED -", string, "- IGNORED")
                     pass
+                elif string[0] == '[' and string[-2] == 'x':
+                    #print("IGNORED -", string, "- IGNORED")
+                    pass
                 elif string[0] == '[':
                     ignore = True
                     #print("IGNORE TRUE", string)
