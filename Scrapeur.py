@@ -242,7 +242,9 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'ma', 'mais', 'me', 'mes', 'mon', 'ne', 'nos', 'notre', 'on', 'ou', 'où',
               'pas', 'plus', "p't'être", "p't-être", 'que', 'qui',
               'sa', 'son', 'se', 'ses', 'sans', 'si', 'sont', 'sur', 'suis', 'ta',
-              'te', 'tes', 'ton', 'tu', 'un', 'une', 'veux', 'vos', "y'a", 'à', 'ça']
+              'te', 'tes', 'ton', 'tu', 'un', 'une', 'veux', 'vos', 'y', "y'a", 'à', 'ça', 
+              'your', 'he', 'eh', 'étais', 'était', 'get', 'to', 'the', 'vais', 'ah', 
+              'ha', 'no', 'ho', 'là', 'quoi', 'donc', 'viens', 'hey', 'sais', 'as', 'han']
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
