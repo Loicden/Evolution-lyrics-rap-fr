@@ -23,8 +23,8 @@ from operator import itemgetter
 import bs4
 from bs4 import BeautifulSoup
 
-#%% Nom de l'album
-Album_url = 'https://genius.com/albums/Lunatic/Mauvais-il'
+#%% Album
+Album_url = 'https://genius.com/albums/Disiz-la-peste/Le-poisson-rouge'
 Album = []
 
 #%% Pistes selon l'album
@@ -104,6 +104,9 @@ def get_lyrics(Album_url):
             elif type(string) is bs4.element.NavigableString: # On évite la balise de lien vers un commentaire
                 string = string.replace('\n', '')
                 if string[0] == '[' and string[-1] == ']':
+                    #print("IGNORED -", string, "- IGNORED")
+                    pass
+                elif string[0] == '[' and string[-2] == 'x':
                     #print("IGNORED -", string, "- IGNORED")
                     pass
                 elif string[0] == '[':
@@ -218,7 +221,7 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'sa', 'son', 'se', 'ses', 'sans', 'si', 'sont', 'sur', 'suis', 'ta',
               'te', 'tes', 'ton', 'tu', 'un', 'une', 'veux', 'vos', 'y', "y'a", 'à', 'ça', 
               'your', 'he', 'eh', 'étais', 'était', 'get', 'to', 'the', 'vais', 'ah', 
-              'ha', 'no', 'ho', 'là', 'quoi', 'donc', 'viens', 'hey', 'sais', 'as', 'han']
+              'ha', 'no', 'ho', 'là', 'quoi', 'donc', 'viens', 'hey', 'sais', 'as', 'han', '-']
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
