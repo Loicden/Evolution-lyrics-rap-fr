@@ -24,7 +24,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Album
-Album_url = 'https://genius.com/albums/Disiz-la-peste/Le-poisson-rouge'
+Album_url = 'https://genius.com/albums/Nouvelle-donne-music/Nouvelle-donne-ii'
 Album = []
 
 #%% Pistes selon l'album
