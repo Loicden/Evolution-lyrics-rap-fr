@@ -34,10 +34,15 @@ def fusion_annee(ANNEE):
                         dic[word] += count/Nbfichiers
         dic = OrderedDict(sorted(dic.items(), key=lambda t: t[0]))
         sortedDict = OrderedDict(sorted(dic.items(), key=lambda t: t[1], reverse=True))
+        
+        with open(Path+"\\albums_"+str(ANNEE)+".csv", newline='', encoding='utf-8') as csvfile:
+            r = csv.reader(csvfile)
+            data = [line for line in r]
                     
-        with open(Path+"\\albums_"+str(ANNEE)+".csv",  'w', newline='', encoding='utf-8') as csvfile:
+        with open(Path+"\\albums_"+str(ANNEE)+".csv", 'w', newline='', encoding='utf-8') as csvfile:
+            writer = csv.writer(csvfile, delimiter=',')
+            writer.writerow(['Mot','Occurrence'])
             for key, value in sortedDict.items():
-                    writer = csv.writer(csvfile, delimiter=',')
                     writer.writerow([key, value])
 
 for annee in annees : 
