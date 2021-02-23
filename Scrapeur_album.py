@@ -24,7 +24,7 @@ import bs4
 from bs4 import BeautifulSoup
 
 #%% Album
-Album_url = 'https://genius.com/albums/Nouvelle-donne-music/Nouvelle-donne-ii'
+Album_url = 'https://genius.com/albums/Nekfeu/Les-etoiles-vagabondes-expansion'
 Album = []
 
 #%% Pistes selon l'album
@@ -103,7 +103,9 @@ def get_lyrics(Album_url):
                 pass
             elif type(string) is bs4.element.NavigableString: # On évite la balise de lien vers un commentaire
                 string = string.replace('\n', '')
-                if string[0] == '[' and string[-1] == ']':
+                if len(string) < 2 :
+                    pass
+                elif string[0] == '[' and string[-1] == ']':
                     #print("IGNORED -", string, "- IGNORED")
                     pass
                 elif string[0] == '[' and string[-2] == 'x':
@@ -211,7 +213,7 @@ def reducer(Map):
     return Reduce
     
 #%% Dictionnaires
-Dict_contractions = {"f'nêtre": 'fenêtre'}
+Dict_contractions = {"f'nêtre": 'fenêtre', "yeaah": "yeah"}
 Dict_argot = {"gole-ri": "drôle", "cons'": 'conso'}
 Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'dans', 'de', 'des', 'dit', 'du', 'en', 'est', 'es', 'et', 'faire', 'fais',
@@ -221,7 +223,7 @@ Dict_ignore = ['a', 'ai', 'au', 'avais', 'avec', 'ce', 'ces', 'ceux', "c'que",
               'sa', 'son', 'se', 'ses', 'sans', 'si', 'sont', 'sur', 'suis', 'ta',
               'te', 'tes', 'ton', 'tu', 'un', 'une', 'veux', 'vos', 'y', "y'a", 'à', 'ça', 
               'your', 'he', 'eh', 'étais', 'était', 'get', 'to', 'the', 'vais', 'ah', 
-              'ha', 'no', 'ho', 'là', 'quoi', 'donc', 'viens', 'hey', 'sais', 'as', 'han', '-']
+              'ha', 'no', 'ho', 'là', 'quoi', 'donc', 'viens', 'hey', 'sais', 'as', 'han', '-', 'mmmh', 'ààà', 'aaaah']
 Dict_remove = ["l'", "d'", "m'", "s'", "c'", "n'", "j'", "qu'", "t'"]
 
 #%% Mapping and reducing
