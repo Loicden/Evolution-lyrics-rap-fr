@@ -25,7 +25,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 """
 #%% Nom de l'artiste
-Artiste = 'Orelsan' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
+Artiste = 'Alpha Wann' # Attention à l'entrer comme il est écrit dans l'URL de sa page genius
 
 #%% Albums selon la page de l'artiste
 def get_albums(Artiste):
@@ -122,7 +122,9 @@ def get_lyrics(Album):
                 pass
             elif type(string) is bs4.element.NavigableString: # On évite la balise de lien vers un commentaire
                 string = string.replace('\n', '')
-                if string[0] == '[' and string[-1] == ']':
+                if len(string) < 2 :
+                    pass
+                elif string[0] == '[' and string[-1] == ']':
                     #print("IGNORED -", string, "- IGNORED")
                     pass
                 elif string[0] == '[' and string[-2] == 'x':
