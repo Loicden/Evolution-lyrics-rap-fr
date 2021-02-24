@@ -1,10 +1,10 @@
-argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche, kichta, plata, illet-bi]
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche, kichta, plata, illet-bi, affaire, affaires, rolex, cartier, veste, marque, v�tements]
 
 street = [binks, bendo, bloc, bitume, terrain, rain-té]
 
 mort = [mort, meurt, meurs, mourir, décès, die, tuerais, crève, cimetière, létale, cadavres, kill, enterre, tue-moi]
 
-violence = [violent, violence, coup, coups, cogne, peur, guerre, guérilla, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, bleus, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, casse, camo, caméra, casseurs, torture, bute, knockout]
+violence = [violent, violence, coup, coups, cogne, peur, guerre, guérilla, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, bleus, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, casse, camo, caméra, casseurs, torture, bute, knockout, soldat]
 
 armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot, glock]
 
@@ -16,9 +16,13 @@ musique_termes_spécifiques = [92i, izi, kalash, boulbi, django]
 
 concepts_abstraits = [paix, question, questions, vérité, life, vie, vivre, futur, future, avenir, destin, monde, loi, âme, temps, années, chance, libre, rêve, esprit, conscience, sens, société]
 
-noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires]
+noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires, noirs, blacks, n�gre, n�gres, renois]
 
-ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted, roi, chevalier, capitaine]
+arabe = [arabe, rebeu, beurre, arabes, rebeus]
+
+blanc = [blanc, babtou, toubab, pale, blancs, babtous, toubabs]
+                   
+ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted, roi, chevalier, capitaine, goku, charisme]
 
 religieux = [mollah, jésus, halal, hallal, ciel, allah, dieu, enfer, paradis, démon, démons, diable, prophète, anges, priez]
 
@@ -28,7 +32,7 @@ lieux = [street, city, terre, bled, rue, ville, quartier, terrain, métro, hôte
 
 aime = [aime, bien, pote, potes, poto, homie, équipe, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble, soleil, bonheur]
 
-drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord, weed, kush, cartel]
+drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord, weed, kush, cartel, roule]
 
 alcool = [alcool, tise, champagne, bière, bistrot, alcoolique, bouteille, gin, vin, whisky, défoncé, boire, bois, cocktails, cocktail, canettes, scotch, bourrés, , bois, rre-ve, rres-ve]
 
