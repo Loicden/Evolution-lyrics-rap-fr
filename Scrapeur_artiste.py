@@ -269,6 +269,7 @@ for Album in Albums:
                 Reduce['je'] += Nb_je
             else:
                 Reduce['je'] = Nb_je
+        Reduce['je'] /= 3   # On pondère le nombre de jeu pour faciliter la visualisation
         i.append(Reduce)
         i.append(Nb_je)       
         total = sum(Reduce.values(), 0.0)
