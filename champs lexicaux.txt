@@ -1,69 +1,69 @@
-argent = [argent, gent-ar, euros, dollars, billets, portefeuille, money, monnaie, banque, banques, casino, liasse, fric, blé, flouze, oseille, cash, pognon, pièces, thune, pèze, maille, moula, mula, moulaga, lovés, wari, biff, payer, paye, revendu, riche, kichta, plata, illet-bi, affaire, affaires, rolex, cartier, veste, marque, v�tements]
+argent = [argent, gent-ar, euros, dollars, billets, portefeuille, dette, money, monnaie, banque, banques, casino, liasse, fric, blÃ©, flouze, oseille, cash, pognon, piÃ¨ces, thune, pÃ¨ze, maille, moula, mula, moulaga, lovÃ©s, wari, biff, payer, paye, revendu, riche, kichta, plata, illet-bi, affaire, affaires, rolex, cartier, veste, marque, vêtements]
 
-street = [binks, bendo, bloc, bitume, terrain, rain-té]
+street = [binks, bendo, bloc, bitume, terrain, rain-tÃ©]
 
-mort = [mort, meurt, meurs, mourir, décès, die, tuerais, crève, cimetière, létale, cadavres, kill, enterre, tue-moi]
+mort = [mort, meurt, meurs, mourir, dÃ©cÃ¨s, die, tuerais, crÃ¨ve, cimetiÃ¨re, lÃ©tale, cadavres, kill, enterre, tue-moi]
 
-violence = [violent, violence, coup, coups, cogne, peur, guerre, guérilla, crime, tombé, gang, clan, rivaliser, venger, vengeance, fanatiques, bleus, sirène, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brûler, mafia, feu, fumée, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloqué, cris, prison, barrières, casse, camo, caméra, casseurs, torture, bute, knockout, soldat]
+violence = [violent, violence, coup, coups, cogne, peur, guerre, guÃ©rilla, crime, tombÃ©, gang, clan, rivaliser, venger, vengeance, fanatiques, bleus, sirÃ¨ne, assassin, corrompt, danger, dangereuse, enfer, nazis, violent, pleurer, battre, fight, victimes, brÃ»ler, mafia, feu, fumÃ©e, menottes, blesser, sang, saigner, viol, bagarrer, blessures, disloquÃ©, cris, prison, barriÃ¨res, casse, camo, camÃ©ra, casseurs, torture, bute, knockout, soldat]
 
-armes = [balles, armé, broliqué, calibre, calibré, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot, glock]
+armes = [balles, armÃ©, broliquÃ©, calibre, calibrÃ©, flingue, flingues, couteau, couteaux, revolvers, fusil, headshot, glock]
 
-musique = [musique, rap, mélodie, paroles, album, musique, music, son, rappeur, mots, chansons, chante, couplet, disque, disques, rime, dj, airs, concerts, club, voix, instru, vinyle, pop]
+musique = [musique, rap, mÃ©lodie, paroles, album, musique, music, son, rappeur, mots, chansons, chante, couplet, disque, disques, rime, dj, airs, concerts, club, voix, instru, vinyle, pop]
 
-personnes = [man, homme, hommes, criminel, gangster, ennemi, ennemis, enemy, thug, coupable, voyous, bandit, gars, traîtres, guerrier, mec, mecs, gagnant, boy, aventurier, gava, gavas, reuf]
+personnes = [man, homme, hommes, criminel, gangster, ennemi, ennemis, enemy, thug, coupable, voyous, bandit, gars, traÃ®tres, guerrier, mec, mecs, gagnant, boy, aventurier, gava, gavas, reuf]
 
-musique_termes_spécifiques = [92i, izi, kalash, boulbi, django]
+musique_termes_spÃ©cifiques = [92i, izi, kalash, boulbi, django]
 
-concepts_abstraits = [paix, question, questions, vérité, life, vie, vivre, futur, future, avenir, destin, monde, loi, âme, temps, années, chance, libre, rêve, esprit, conscience, sens, société]
+concepts_abstraits = [paix, question, questions, vÃ©ritÃ©, life, vie, vivre, futur, future, avenir, destin, monde, loi, Ã¢me, temps, annÃ©es, chance, libre, rÃªve, esprit, conscience, sens, sociÃ©tÃ©]
 
-noir = [black, renoi, nigga, niggas, niggiz, négro, négros, noir, noires, noirs, blacks, n�gre, n�gres, renois]
+noir = [black, renoi, nigga, niggas, niggiz, nÃ©gro, nÃ©gros, noir, noires, noirs, blacks, nègre, nègres, renois]
 
 arabe = [arabe, rebeu, beurre, arabes, rebeus]
 
 blanc = [blanc, babtou, toubab, pale, blancs, babtous, toubabs]
                    
-ego = [swag, maître, leader, pèse, masta, boss, as, magiciens, beau, beaux, invincible, talent, génie, gifted, roi, chevalier, capitaine, goku, charisme]
+ego = [swag, maÃ®tre, leader, pÃ¨se, masta, boss, as, magiciens, beau, beaux, invincible, talent, gÃ©nie, gifted, roi, chevalier, capitaine, goku, charisme]
 
-religieux = [mollah, jésus, halal, hallal, ciel, allah, dieu, enfer, paradis, démon, démons, diable, prophète, anges, priez]
+religieux = [mollah, jÃ©sus, halal, hallal, ciel, allah, dieu, enfer, paradis, dÃ©mon, dÃ©mons, diable, prophÃ¨te, anges, priez]
 
-onomatopés = [wesh, ouais, yeah, hey, nan, no, oh, yo, ok, okay, eh, ah, ouaaais, uh, bah, youh, allo]
+onomatopÃ©s = [wesh, ouais, yeah, hey, nan, no, oh, yo, ok, okay, eh, ah, ouaaais, uh, bah, youh, allo]
 
-lieux = [street, city, terre, bled, rue, ville, quartier, terrain, métro, hôtel, boîte, maison, parc, parcs, marseille, afrique, paris, paname, pays, voyage, français, maroc, afghanistan, amsterdam]
+lieux = [street, city, terre, bled, rue, ville, quartier, terrain, mÃ©tro, hÃ´tel, boÃ®te, maison, parc, parcs, marseille, afrique, paris, paname, pays, voyage, franÃ§ais, maroc, afghanistan, amsterdam]
 
-aime = [aime, bien, pote, potes, poto, homie, équipe, mieux, préféré, coeur, belle, love, amour, amis, amitié, préfère, aimait, aimerais, love, loveur, sourire, souris, ensemble, soleil, bonheur]
+aime = [aime, bien, pote, potes, poto, homie, Ã©quipe, mieux, prÃ©fÃ©rÃ©, coeur, belle, love, amour, amis, amitiÃ©, prÃ©fÃ¨re, aimait, aimerais, love, loveur, sourire, souris, ensemble, soleil, bonheur]
 
-drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dé, high, grammes, fumé, joint, beuh, herbe, clope, cocaïne-lord, weed, kush, cartel, roule]
+drogues = [toxico', toxicoman, drogue, seringue, addict, cannabis, fonce-dÃ©, high, grammes, fumÃ©, joint, beuh, herbe, clope, cocaÃ¯ne-lord, weed, kush, cartel, roule]
 
-alcool = [alcool, tise, champagne, bière, bistrot, alcoolique, bouteille, gin, vin, whisky, défoncé, boire, bois, cocktails, cocktail, canettes, scotch, bourrés, , bois, rre-ve, rres-ve]
+alcool = [alcool, tise, champagne, biÃ¨re, bistrot, alcoolique, bouteille, gin, vin, whisky, dÃ©foncÃ©, boire, bois, cocktails, cocktail, canettes, scotch, bourrÃ©s, , bois, rre-ve, rres-ve]
 
-travail = [boulot, taf, taffé, biz, job, business, collègues, patrons, bureau, buildings, carrière, salaire]
+travail = [boulot, taf, taffÃ©, biz, job, business, collÃ¨gues, patrons, bureau, buildings, carriÃ¨re, salaire]
 
 police = [flic, flics, keuf, cop]
 
 luxe = [maybach, diamants, millionnaire, or, luxe, palace, porsche, gucci, villa]
 
-émotions/adjectifs_positif = [force, puissance, fier, honnête, respect, calme, zen, confiance, mérite]
+Ã©motions/adjectifs_positif = [force, puissance, fier, honnÃªte, respect, calme, zen, confiance, mÃ©rite]
 
-émotions/adjectifs_négatif = [insomnie, mélancolie, minable, inquiète, nerfs, soucis, crise, erreurs, souffert, souffrir, souffrance, triste, regrets, pire, seum, stress, risques, mal, larmes, peur, haine, marre, chagrin, mépris, seum, colère, envie, manque, rage, déshonneur, folie, fou, fous, sale, seul, personne, grosse, grave, faibles, faible, foutu, frustré, honte, énervé, errer, traîner, faute, feeling, dégoûté, douter, ennuis, ténébreux, remords]
+Ã©motions/adjectifs_nÃ©gatif = [insomnie, mÃ©lancolie, minable, inquiÃ¨te, nerfs, soucis, crise, erreurs, souffert, souffrir, souffrance, triste, regrets, pire, seum, stress, risques, mal, larmes, peur, haine, marre, chagrin, mÃ©pris, seum, colÃ¨re, envie, manque, rage, dÃ©shonneur, folie, fou, fous, sale, seul, personne, grosse, grave, faibles, faible, foutu, frustrÃ©, honte, Ã©nervÃ©, errer, traÃ®ner, faute, feeling, dÃ©goÃ»tÃ©, douter, ennuis, tÃ©nÃ©breux, remords]
 
-exagération = [toujours, rien, jamais, tellement, tous, trop, vraiment, aucun]
+exagÃ©ration = [toujours, rien, jamais, tellement, tous, trop, vraiment, aucun]
 
-** = [fuck, putes, baise, baiser, couilles, nique, bâtard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoiré, enculé, connard, salope, pétasses, bastard, conneries, bitch, bitches, bite]
+** = [fuck, putes, baise, baiser, couilles, nique, bÃ¢tard, gros, gueule, merde, shit, chatte, cul, foutre, merde, putain, twerke, embrouilles, chier, enfoirÃ©, enculÃ©, connard, salope, pÃ©tasses, bastard, conneries, bitch, bitches, bite]
 
 je = [je, moi, oim, my]
 
-famille = [famille, mif', mif, miff, mama, maman, mère, mères, frère, frères, frérot, fils, grand-mère, grand-père, grands-parents, famille, daronne, garçon, pères, papa, enfant, enfants, child, mômes, gamins, soeur, cousin, couz', fillette]
+famille = [famille, mif', mif, miff, mama, maman, mÃ¨re, mÃ¨res, frÃ¨re, frÃ¨res, frÃ©rot, fils, grand-mÃ¨re, grand-pÃ¨re, grands-parents, famille, daronne, garÃ§on, pÃ¨res, papa, enfant, enfants, child, mÃ´mes, gamins, soeur, cousin, couz', fillette]
 
-verlan = [rebeu, veau-cer, tur-fu, té-cô, trix-ma, seille-mar, screts-di, ients-cli, gol-mon, gent-ar, deur-vi, del-bor, cé-per, che-blan, ieux-sér, àl, oim, le-gueu, tit-pe, tass-pé, tard-pé, sser-ca, son-pri]
+verlan = [rebeu, veau-cer, tur-fu, tÃ©-cÃ´, trix-ma, seille-mar, screts-di, ients-cli, gol-mon, gent-ar, deur-vi, del-bor, cÃ©-per, che-blan, ieux-sÃ©r, Ã l, oim, le-gueu, tit-pe, tass-pÃ©, tard-pÃ©, sser-ca, son-pri]
 
-femme = [celle-là, meuf, madame, fe-meu, femme, elle, baby, bébé, copine, nana, bonne, jolie, filles, girl, girlfriend, menteuse, bouffones, grosses, pétasse]
+femme = [celle-lÃ , meuf, madame, fe-meu, femme, elle, baby, bÃ©bÃ©, copine, nana, bonne, jolie, filles, girl, girlfriend, menteuse, bouffones, grosses, pÃ©tasse]
 
 corps = [corps, main, joue, bouche, bouches, dents, poitrine, yeux, dos, oeil, nez, fesses, pieds, ied-p, talons, thighs, visage]
 
-sanscategorie_reviennent_souvent = [game, minuit, dansé, danse, jeune, bulle, adieu, coeur, sommeil, style, textes, dos, loin, weekend, système, jeu, nuit, nuits, vrai, pourquoi, yeux, poitrine, air, faut, prends, corps, histoires, face, game, crâne, choses, tête, croire, crois, fond, mêmes, toi, école, élève, important, essaye, vibe, inconnu]
+sanscategorie_reviennent_souvent = [game, minuit, dansÃ©, danse, jeune, bulle, adieu, coeur, sommeil, style, textes, dos, loin, weekend, systÃ¨me, jeu, nuit, nuits, vrai, pourquoi, yeux, poitrine, air, faut, prends, corps, histoires, face, game, crÃ¢ne, choses, tÃªte, croire, crois, fond, mÃªmes, toi, Ã©cole, Ã©lÃ¨ve, important, essaye, vibe, inconnu]
 
-sanscategorie2 = [pirate, impossible, attention, belek, folle, déteste, genre, smokin', avancer, bouteille, faux, faim, flow, flem, fois, jour, train, succès]
+sanscategorie2 = [pirate, impossible, attention, belek, folle, dÃ©teste, genre, smokin', avancer, bouteille, faux, faim, flow, flem, fois, jour, train, succÃ¨s]
 
-sanscategorie3 = [photos, coix, humeur, emoji, café, parler, pulsions, why, passe, choisi, peux, vice, connu, comprendre, demain, ennuies, refuses, longue, ligne, ko, hardcore, oublier, malade, traces]
+sanscategorie3 = [photos, coix, humeur, emoji, cafÃ©, parler, pulsions, why, passe, choisi, peux, vice, connu, comprendre, demain, ennuies, refuses, longue, ligne, ko, hardcore, oublier, malade, traces]
 
 
